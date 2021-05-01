@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Django</title>
+</head>
+<body>
+    <div>
+        <h1>Primera App Django</h1>
+    </div>
+    {% for post in posts %}
+    <div>
+        <p>Fecha de Publicación: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
